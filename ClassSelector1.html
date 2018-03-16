@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $('.small').css('border', '5px solid red');
+            $('.small.big').css('border', '5px solid grey');
+            $('.small').filter('.big').css('border', '5px solid yellow');
+        });
+    </script>
+</head>
+<body>
+    <span class="small">
+        Span 1
+    </span>
+    <br /> <br />
+    <div class="small big">
+        Div 1
+    </div>
+
+    <div class="small">
+        Div 2
+        <br />
+        <div class="big">
+            Div 3
+        </div>
+
+    </div>
+
+    <br />
+    <span class="big">
+        Span2
+    </span>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+
+    <script src="http://ajax.microsoft.com/ajax/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('tr:even').css('background', 'grey');
+            $('tr:odd').css('background', 'yellow');
+
+            $('table tr').each(function () {
+               alert( $(this).html());
+            });
+        });
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>C#</td>
+            <td>ASP.NET</td>
+            <td>SQL Server</td>
+        </tr>
+        <tr>
+            <td>ADO.NET</td>
+            <td>JQuery</td>
+            <td>JavaScript</td>
+        </tr>
+        <tr>
+            <td>AJAX</td>
+            <td>CSS</td>
+            <td>HTML</td>
+        </tr>
+        <tr>
+            <td>VB</td>
+            <td>Dotnet</td>
+            <td>Visual C#</td>
+        </tr>
+        <tr>
+            <td>Oracle</td>
+            <td>Java</td>
+            <td>J2EE</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"> 
+        $(function () {
+            $('#t').keypress(function (e) {
+                var txt = String.fromCharCode(e.which);
+                console.log(txt + ' : ' + e.which);
+                if (!txt.match(/[A-Za-z0-9+#.]/))//+#-.
+                {
+                    return false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    Name: <input type="text"  id="t1" name="user"><br>
+   
+    Password: <input type="password" name="password"><br>
+
+    <p> Hi this is me..!! </p>
+    <button type="button"> Button</button>
+
+</body>
+</html>

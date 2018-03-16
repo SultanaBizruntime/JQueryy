@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> Phone Number</title>
+
+
+    <style type="text/css">
+        body {
+            font-size: 25pt;
+            font-family: Arial;
+        }
+    </style>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        var specialKeys = new Array();
+        specialKeys.push(8); //Backspace
+        $(function () {
+            $(".numeric").on("keypress", function (e) {
+                var keyCode = e.which ? e.which : e.keyCode
+                var ret = ((keyCode >= 48 && keyCode <= 57) || specialKeys.indexOf(keyCode) != -1);
+                $(".error").css("display", ret ? "none" : "inline");
+                return ret;
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    Numeric Value: <input type="text" id="text1" class="numeric" />
+    <span class="error" style="color: Red; display: none">* Input digits (0 - 9)</span>
+   
+</body>
+</html>
+
